@@ -22,13 +22,7 @@
                     <userControls:ucMainWindow />
                 </DataTemplate>
                 <DataTemplate DataType="{x:Type viewModels:vmBoekLijst}">
-                    <userControls:ucBoekLijst />
-                </DataTemplate>                
-                <DataTemplate DataType="{x:Type viewModels:vmBoekDetail}">
-                    <userControls:ucBoekDetail />
-                </DataTemplate>
-                <DataTemplate DataType="{x:Type viewModels:vmBoekBewerken}">
-                    <userControls:ucBoekBewerken />
+                    <userControls:ucMainWindow />
                 </DataTemplate>
             </ContentControl.Resources>
         </ContentControl>

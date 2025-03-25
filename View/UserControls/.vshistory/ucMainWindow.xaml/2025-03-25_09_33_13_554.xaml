@@ -7,6 +7,5 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Label FontSize="35" Content="Welcome op de Boek Beheer App" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </UserControl>

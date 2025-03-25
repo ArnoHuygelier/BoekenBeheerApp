@@ -9,26 +9,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        
-        <userControls:NavigationBar Grid.Row="0" DataContext="{Binding VmNavigationBar}" />
-        <ContentControl Grid.Row="1" Content="{Binding CurrentViewModel}">
+        <userControls:NavigationBar DataContext="{Binding VmNavigationBar}" />
+        <ContentControl Content="{Binding CurrentViewModel}">
             <!--linken van vm aan userControl-->
             <ContentControl.Resources>
-                <DataTemplate DataType="{x:Type viewModels:vmHome}">
+                <DataTemplate DataType="{x:Type viewModels:vmMainWindow}">
                     <userControls:ucMainWindow />
-                </DataTemplate>
-                <DataTemplate DataType="{x:Type viewModels:vmBoekLijst}">
-                    <userControls:ucBoekLijst />
-                </DataTemplate>                
-                <DataTemplate DataType="{x:Type viewModels:vmBoekDetail}">
-                    <userControls:ucBoekDetail />
-                </DataTemplate>
-                <DataTemplate DataType="{x:Type viewModels:vmBoekBewerken}">
-                    <userControls:ucBoekBewerken />
                 </DataTemplate>
             </ContentControl.Resources>
         </ContentControl>

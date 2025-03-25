@@ -10,8 +10,7 @@ namespace BoekenBeheerApp.ViewModel
     public class vmMain : vmBase
     {
         private readonly NavigationStore _navigationStore;
-        
-        public vmNavigationBar VmNavigationBar { get; set; }
+
         public vmBase CurrentViewModel => _navigationStore.CurrentViewModel;
 
         public vmMain(NavigationStore navigationStore)
@@ -20,7 +19,6 @@ namespace BoekenBeheerApp.ViewModel
             _navigationStore = navigationStore;
             //deze methode OnCurrentViewModelChanged in store
             _navigationStore.CurrentViewModelChanged += _navigationStore_CurrentViewModelChanged;
-            VmNavigationBar = new vmNavigationBar(_navigationStore);
         }
 
         private void _navigationStore_CurrentViewModelChanged()

@@ -14,7 +14,7 @@ public partial class App : Application
     NavigationStore _navigationStore = new NavigationStore();
     protected override void OnStartup(StartupEventArgs e)
     {
-        _navigationStore.CurrentViewModel = new vmHome(_navigationStore);
+        _navigationStore.CurrentViewModel = new vmMainWindow(_navigationStore);
 
         MainWindow = new MainWindow()
         {
