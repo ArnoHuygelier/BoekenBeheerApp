@@ -1,0 +1,21 @@
+﻿<Window x:Class="BoekenBeheerApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BoekenBeheerApp"
+        xmlns:viewModels="clr-namespace:BoekenBeheerApp.ViewModel"
+        xmlns:userControls="clr-namespace:BoekenBeheerApp.View.UserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ContentControl Content="{Binding CurrentViewModel}">
+            <!--linken van vm aan userControl-->
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type viewModels:vmMainWindow}">
+                    <userControls:ucMainWindow />
+                </DataTemplate>
+            </ContentControl.Resources>
+        </ContentControl>
+    </Grid>
+</Window>
