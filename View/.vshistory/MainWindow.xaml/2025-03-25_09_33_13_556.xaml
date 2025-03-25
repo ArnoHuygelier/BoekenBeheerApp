@@ -9,7 +9,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
         <ContentControl Content="{Binding CurrentViewModel}">
             <!--linken van vm aan userControl-->
             <ContentControl.Resources>
